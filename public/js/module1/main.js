@@ -1,3 +1,4 @@
 import * as $ from 'jquery';
+import { sum } from '../util/math';
 
-console.log('Module one');
+console.log(sum(4, 5));

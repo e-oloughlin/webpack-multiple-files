@@ -1,3 +1,4 @@
 import _ from 'lodash';
+import { sub } from '../util/math';
 
-console.log('module 2');
+console.log(sub(11, 3));
