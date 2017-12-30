@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "clean": "rm */**/*.bundle.js",
+    "clean": "rm public/*/**/bundle.js",
     "build": "webpack"
   },
   "keywords": [],
