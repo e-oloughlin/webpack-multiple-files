@@ -5,7 +5,7 @@ const readDirRecursive = require('recursive-readdir-synchronous');
 
 /**
  * Returns a webpack bundle name for filePath
- * It's a bit of a hack. For a path like: '...module/module1/module1/main.js'
+ * It's a bit of a hack. For a path like: '...module/module1/main.js'
  * it will return 'module/module1/module1'
  * @param  {String} filePath    The file path for an entry path
  * @return {String}
