@@ -4,17 +4,18 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm */**/*.bundle.js",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.2.1",
-    "lodash": "^4.17.4",
     "webpack": "^3.10.0"
   },
   "devDependencies": {
+    "lodash": "^4.17.4",
     "recursive-readdir-synchronous": "0.0.3"
   }
 }
