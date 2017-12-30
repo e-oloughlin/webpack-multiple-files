@@ -33,9 +33,12 @@ module.exports = {
             let module = path.resolve(basePath, dir);
             let entry = _.find(fs.readdirSync(module), file => /main\.js/.test(file));
 
+            // if a main.js file exists
+            if (!entry) return false;
+
             return path.resolve(basePath, module, entry);
         });
 
-        return _.keyBy(entryFiles, file => this.getBundleName(file));
+        return _.keyBy(_.compact(entryFiles), file => this.getBundleName(file));
     }
 };

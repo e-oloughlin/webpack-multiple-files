@@ -2,6 +2,7 @@
   "name": "webpack-multiple-files",
   "version": "1.0.0",
   "description": "",
+  "repository": "https://github.com/e-oloughlin/webpack-multiple-files",
   "main": "webpack.config.js",
   "scripts": {
     "clean": "rm public/*/**/bundle.js",
@@ -11,11 +12,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.2.1",
-    "webpack": "^3.10.0"
+    "@babel/core": "^7.0.0-beta.36",
+    "@babel/preset-env": "^7.0.0-beta.36",
+    "babel-loader": "^8.0.0-beta.0",
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
+    "babel-minify-webpack-plugin": "^0.2.0",
     "lodash": "^4.17.4",
-    "recursive-readdir-synchronous": "0.0.3"
+    "webpack": "^3.10.0"
   }
 }
