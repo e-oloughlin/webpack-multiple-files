@@ -1,9 +1,19 @@
+const webpack = require('webpack');
 const path = require('path');
 const util = require('./webpack-util');
+const _ = require('lodash');
 const MinifyPlugin = require("babel-minify-webpack-plugin");
 
+// Modular files
+let entry = util.getEntries(path.resolve(__dirname, 'public/js'));
+
+// Add vendor libraries to entry
+_.assign(entry, {
+    vendor: ['jquery', 'lodash']
+});
+
 let config = {
-    entry: util.getEntries(path.resolve(__dirname, 'public/js')),
+    entry,
     output: {
         filename: '[name].js'
     },
@@ -21,6 +31,9 @@ let config = {
         }]
     },
     plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor'
+        }),
         new MinifyPlugin()
     ]
 };
