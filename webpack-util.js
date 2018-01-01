@@ -21,10 +21,10 @@ module.exports = {
     },
 
     /**
-     * Returns an array of js files for webpack to process,
+     * Returns a collection of js files for webpack to process,
      * where the entry file is named 'main.js'
      * @param  {String} basePath    The top level directory containing js modules
-     * @return {Array}              An array of javascript file paths
+     * @return {Object}             Collection of file paths
      */
     getEntries(basePath) {
         let modules = fs.readdirSync(basePath);
