@@ -27,7 +27,9 @@ module.exports = {
      * @return {Object}             Collection of file paths
      */
     getEntries(basePath) {
-        let modules = fs.readdirSync(basePath);
+        let modules = fs.readdirSync(basePath).filter(module => {
+            fs.lstatSync(path.resolve(basePath, module)).isDirectory();
+        });
 
         let entryFiles = modules.map((dir) => {
             let module = path.resolve(basePath, dir);
